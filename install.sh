@@ -7,18 +7,28 @@ if [ ! -d $DIRECTORY ]; then
 	mkdir $DIRECTORY
 fi
 
-if [ ! -d ~/bin ]; then
+if [ ! -d $HOME/bin/imagemagick ]; then
 	mkdir -p $HOME/bin/imagemagick
 fi
 
-if [ -f build.sh ]; then
+if [ -f singularity-imagemagick.simg ]; then
+	cp singularity-imagemagick.simg $DIRECTORY/
+else
 	bash ./build.sh
+	mv singularity-imagemagick.simg $DIRECTORY/
 fi
 
-cat << EOF > $HOME/bin/imagemagick
+cat << EOF > $HOME/bin/imagemagick/convert
 #!/bin/bash
 
-singularity run --app convert $HOME/.singularity/singularity-gotop.simg $1
+if [ -z "$SLURMD_NODENAME" ]; then
+	echo "Unable to run Singularity on the head node. Please use Singularity from within a compute node."
+else
+	singularity run --app convert $HOME/.singularity/singularity-imagemagick.simg $1
+fi
 EOF
 
-chmod +x $HOME/bin/imagemagick/*
+for F in $HOME/bin/imagemagick/*
+do
+	chmod +x $F
+done
