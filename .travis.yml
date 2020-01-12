@@ -57,6 +57,7 @@ script:
   - singularity run --app animate singularity-imagemagick.simg --version
   - singularity run --app compare singularity-imagemagick.simg --version
   - singularity run --app composite singularity-imagemagick.simg --version
+  - singularity run --app conjure singularity-imagemagick.simg -version
   - singularity run --app display singularity-imagemagick.simg --version
   - singularity run --app mogrify singularity-imagemagick.simg --version
   - singularity run --app montage singularity-imagemagick.simg --version
