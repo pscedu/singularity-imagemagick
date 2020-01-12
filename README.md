@@ -1,4 +1,4 @@
-# gotop
+# ImageMagick
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2229)
 [![Build Status](https://travis-ci.org/icaoberg/singularity-imagemagick.svg?branch=master)](https://travis-ci.org/icaoberg/singularity-imagemagick)
 [![GitHub issues](https://img.shields.io/github/issues/icaoberg/singularity-imagemagick.svg)](https://github.com/icaoberg/singularity-imagemagick/issues)
