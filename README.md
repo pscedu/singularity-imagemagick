@@ -8,14 +8,27 @@
 
 ![Logo](/images/wizard.jpg)
 
-Singularity recipe for [ImageMagick](https://imagemagick.org/index.php).
+Singularity recipe for [ImageMagick](https://imagemagick.org/index.php) v6.9.10-23.
 
 Use ImageMagick® to create, edit, compose, or convert bitmap images. It can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
-## Installation
+## Pre-requisites
 
-* Install [Singularity v3.5.+](https://sylabs.io/docs/).
-* Run the script `install.sh` included in this repository.
+* [Singularity v3.5.+](https://sylabs.io/docs/).
+
+## Build the image using the recipe
+
+### Locally
+Run the script `build.sh` to build image locally. As of today, Does not work on MacOSX.
+
+### Remotely
+Run the script `rbuild.sh` to build image remotely. Works on any client.
+
+## Installing the tools
+Alternatively, you can run `install.sh`. The script will
+
+1. build the image locally if not present.
+2. Will create `alias`es for every tool in ImageMagick for the current user. 
 
 ## Disclaimer
 
