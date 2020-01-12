@@ -38,7 +38,12 @@ matrix:
   include:
     - python: "3.7"
 
+git:
+    submodules: false
+
 before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive
   - sudo chmod u+x .travis/*.sh
   - /bin/bash .travis/setup.sh
 
