@@ -7,12 +7,15 @@ if [ ! -d $DIRECTORY ]; then
 	mkdir $DIRECTORY
 fi
 
-if [ ! -d ~/bin ]; then
+if [ ! -d $HOME/bin/imagemagick ]; then
 	mkdir -p $HOME/bin/imagemagick
 fi
 
-if [ -f build.sh ]; then
+if [ -f singularity-imagemagick.simg ]; then
+	cp singularity-imagemagick.simg $DIRECTORY/
+else
 	bash ./build.sh
+	mv singularity-imagemagick.simg $DIRECTORY/
 fi
 
 if [ -f ~/.zshrc ]; then
