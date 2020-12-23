@@ -1,19 +1,15 @@
 Bootstrap: docker
-From: debian:buster
-
-IncludeCmd: yes
+From: alpine:edge
 
 %labels
     AUTHOR icaoberg
-    EMAIL icaoberg@andrew.cmu.edu
+    EMAIL icaoberg@psc.edu
     WEBSITE http://www.andrew.cmu.edu/~icaoberg
-    VERSION 6.9.10-23
 
 %post
-    /usr/bin/apt-get update && apt-get install -y --no-install-recommends apt-utils
-    /usr/bin/apt-get update --fix-missing
-    /usr/bin/apt-get install -y unzip default-jre imagemagick  
-  
+    apk update
+    apk add imagemagick
+
 ####################################################################################
 #  ___                            __  __             _      _
 # |_ _|_ __ ___   __ _  __ _  ___|  \/  | __ _  __ _(_) ___| | __
@@ -22,6 +18,12 @@ IncludeCmd: yes
 # |___|_| |_| |_|\__,_|\__, |\___|_|  |_|\__,_|\__, |_|\___|_|\_\
 #                      |___/                   |___/
 ####################################################################################
+%apphelp magick
+    magick --help
+
+%apprun magick
+    magick "$@"
+
 %apphelp animate
     animate --help
 
