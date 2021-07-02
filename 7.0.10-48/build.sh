@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=singularity-imagemagick.sif
+IMAGE=singularity-imagemagick-7.0.10-48.sif
 DEFINITION=Singularity
 
 if [ -f $IMAGE ]; then
