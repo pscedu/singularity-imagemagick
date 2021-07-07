@@ -7,7 +7,7 @@
 # ImageMagick
 ![Logo](/images/wizard.jpg)
 
-Singularity recipe for [ImageMagick](https://imagemagick.org/index.php) v6.9.10-23.
+Singularity recipe for [ImageMagick](https://imagemagick.org/index.php).
 
 Use ImageMagick® to create, edit, compose, or convert bitmap images. It can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.
 
@@ -15,7 +15,7 @@ Use ImageMagick® to create, edit, compose, or convert bitmap images. It can rea
 ## Building the image using the recipe
 
 ### To build the image locally
-Run the script `build.sh` to build image locally. As of today, Does not work on MacOSX.
+Run the script `build.sh` to build image locally.
 
 ```
 bash ./build.sh
