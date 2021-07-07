@@ -25,7 +25,17 @@ To unload the module, type
 > module unload imagemagick/7.1.0-2
 
 Tools included in this module are
-* imagemagick
+
+* magick
+* animate
+* compare
+* composite
+* conjure
+* convert
+* display
+* identify
+* mogrify
+* montage
 ]])
 
 local package = "imagemagick"
