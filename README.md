@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-imagemagick)
 
 # ImageMagick
-![Logo](/images/wizard.jpg)
+![Logo](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fyenpai.idis.com.tw%2Fwp-content%2Fuploads%2F2012%2F11%2Fimagemagick_wizard_thumb.jpg&f=1&nofb=1)
 
 Singularity recipe for [ImageMagick](https://imagemagick.org/index.php).
 
