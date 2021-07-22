@@ -4,6 +4,8 @@
 -- "URL: https://www.psc.edu/resources/software"
 -- "Category: Other"
 -- "Description: ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images."
+-- "Keywords: singularity utilities"
+
 
 whatis("Name: imagemagick")
 whatis("Version: 7.1.0-2")
