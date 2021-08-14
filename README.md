@@ -1,4 +1,5 @@
 ![Status](https://github.com/pscedu/singularity-imagemagick/actions/workflows/main.yml/badge.svg)
+![Status](https://github.com/pscedu/singularity-imagemagick/actions/workflows/pretty.yml/badge.svg)
 ![Issue](https://img.shields.io/github/issues/pscedu/singularity-imagemagick)
 ![forks](https://img.shields.io/github/forks/pscedu/singularity-imagemagick)
 ![Stars](https://img.shields.io/github/stars/pscedu/singularity-imagemagick)
