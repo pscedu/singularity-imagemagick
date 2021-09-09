@@ -14,10 +14,8 @@ whatis("URL: https://www.psc.edu/resources/software")
 whatis("Description: ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. ")
 
 help([[
-Description
------------
 ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images.
-  
+
 To load the module, type
 
 > module load imagemagick/7.1.0-2
