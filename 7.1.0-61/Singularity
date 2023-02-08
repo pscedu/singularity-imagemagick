@@ -17,7 +17,7 @@ From: debian:latest
     sed -i 's|<policy domain="resource" name="height" value="16KP"/>|<policy domain="resource" name="height" value="128KP"/>|g' /etc/ImageMagick-6/policy.xml
     sed -i 's|<policy domain="resource" name="memory" value="256MiB"/>|<policy domain="resource" name="memory" value="32GiB"/>|g' /etc/ImageMagick-6/policy.xml
     sed -i 's|<policy domain="resource" name="map" value="512MiB"/>|<policy domain="resource" name="map" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
-    sed -i 's|<!-- <policy domain="resource" name="temporary-path" value="/tmp"/> -->|<policy domain="resource" name="temporary-path" value="/scratch"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<!-- <policy domain="resource" name="temporary-path" value="/tmp"/> -->|<policy domain="resource" name="temporary-path" value="/tmp"/>|g' /etc/ImageMagick-6/policy.xml
     sed -i 's|<policy domain="resource" name="map" value="512MiB"/>|<policy domain="resource" name="map" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
     sed -i 's|<policy domain="resource" name="disk" value="1GiB"/>|<policy domain="resource" name="disk" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
 
