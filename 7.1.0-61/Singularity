@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: alpine:edge
+From: debian:latest
 
 %labels
     MAINTAINER icaoberg
@@ -10,74 +10,15 @@ From: alpine:edge
     VERSION 7.1.0-61
 
 %post
-    apk update
-    apk add imagemagick
+    apt update
+    apt -y upgrade
+    apt install -y imagemagick libtiff-tools
+    sed -i 's|<policy domain="resource" name="width" value="16KP"/>|<policy domain="resource" name="width" value="128KP"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<policy domain="resource" name="height" value="16KP"/>|<policy domain="resource" name="height" value="128KP"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<policy domain="resource" name="memory" value="256MiB"/>|<policy domain="resource" name="memory" value="32GiB"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<policy domain="resource" name="map" value="512MiB"/>|<policy domain="resource" name="map" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<!-- <policy domain="resource" name="temporary-path" value="/tmp"/> -->|<policy domain="resource" name="temporary-path" value="/scratch"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<policy domain="resource" name="map" value="512MiB"/>|<policy domain="resource" name="map" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
+    sed -i 's|<policy domain="resource" name="disk" value="1GiB"/>|<policy domain="resource" name="disk" value="12GiB"/>|g' /etc/ImageMagick-6/policy.xml
 
-####################################################################################
-#  ___                            __  __             _      _
-# |_ _|_ __ ___   __ _  __ _  ___|  \/  | __ _  __ _(_) ___| | __
-#  | || '_ ` _ \ / _` |/ _` |/ _ \ |\/| |/ _` |/ _` | |/ __| |/ /
-#  | || | | | | | (_| | (_| |  __/ |  | | (_| | (_| | | (__|   <
-# |___|_| |_| |_|\__,_|\__, |\___|_|  |_|\__,_|\__, |_|\___|_|\_\
-#                      |___/                   |___/
-####################################################################################
-%apphelp magick
-    magick --help
-
-%apprun magick
-    magick "$@"
-
-%apphelp animate
-    animate --help
-
-%apprun animate
-    animate "$@"
-
-%apphelp compare
-    compare --help
-
-%apprun compare
-    compare "$@"
-
-%apphelp composite
-    composite --help
-
-%apprun composite
-    composite "$@"
-
-%apphelp conjure
-    conjure --help
-
-%apprun conjure
-    conjure "$@"
-
-%apphelp convert
-    convert --help
-
-%apprun convert
-    convert "$@"
-
-%apphelp display
-    display --help
-
-%apprun display
-    display "$@"
-
-%apphelp identify
-    identify --help
-
-%apprun identify
-    identify "$@"
-
-%apphelp mogrify
-    mogrify --help
-
-%apprun mogrify
-    mogrify "$@"
-
-%apphelp montage
-    montage --help
-
-%apprun montage
-    montage "$@"
 ####################################################################################
