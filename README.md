@@ -6,7 +6,6 @@
 ![License](https://img.shields.io/github/license/pscedu/singularity-imagemagick)
 
 # ImageMagick
-![Logo](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fyenpai.idis.com.tw%2Fwp-content%2Fuploads%2F2012%2F11%2Fimagemagick_wizard_thumb.jpg&f=1&nofb=1)
 
 Singularity recipe for [ImageMagick](https://imagemagick.org/index.php).
 
@@ -36,7 +35,7 @@ bash ./test.sh
 ```
 
 ---
-Copyright © 2020-2023 Pittsburgh Supercomputing Center. All Rights Reserved.
+Copyright © 2020-2025 Pittsburgh Supercomputing Center. All Rights Reserved.
 
 The [Biomedical Applications Group](https://www.psc.edu/biomedical-applications/) at the [Pittsburgh Supercomputing
 Center](http://www.psc.edu) in the [Mellon College of Science](https://www.cmu.edu/mcs/) at [Carnegie Mellon University](http://www.cmu.edu).
